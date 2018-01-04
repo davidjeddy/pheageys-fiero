@@ -1,0 +1,272 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="imagetoolbar" CONTENT="no">
+<title>Pheagey's Fiero</title>
+<!--META TAGS and NOTES-->
+<!--HEAD CSS-->
+<link rel="StyleSheet" type="text/css" href="css/pfcss.css">
+<!--HEAD SCRIPTS-->
+<!--no error, right click-->
+<script language="javascript" type="text/javascript" src="jscripts/mainscript-head.js"></script>
+<!--Moving mechanism script-->
+<SCRIPT language=JavaScript>
+<!--
+//starting X
+var x =0;
+roll = 'true';
+function scrollit(destination)
+	{/*step = who many steps*/
+		{step = 2; dest = destination; 
+		if (x<dest)
+			{
+			while (x<dest)
+				{//right moving speed, steps per cyctel
+				step += (step / 25);
+				x += step;
+				scroll(x,0);
+				}
+			scroll(dest,0);
+			x = dest;
+			}
+		else if (x > dest)
+			{
+				while (x > dest)
+					{
+					//left moving speed, steps per cycle
+					step += (step / 25);
+					if(x >= (0+step))
+						{
+						x -= step; 
+						scroll(x,0);
+						}
+					else
+						{
+						break;
+						}
+					} 
+				if(dest >= 0)
+					{
+					scroll(dest,0);
+					}
+				x = dest;
+			}
+		if (x<1)
+			{
+			x=1;
+			}
+		/*numbers are totla width of setup*/
+		if (x>3600)
+			{
+			x=3600;
+			}
+		}
+	}
+	// stop hiding -->
+</SCRIPT>
+</HEAD>
+<body bottommargin="0" leftmargin="0" marginheight="0" marginwidth="0" rightmargin="0" scroll="no" topmargin="0" onload="scroll(x,0)">
+<!--no right click-->
+<script language="javascript" type="text/javascript" src="jscripts/mainscript-topofbody.js"></script>
+
+
+<!--sets up the main areas and clickable link areas-->
+<TABLE align="center" valign="middle" border="0" bordercolor="#ffff00" cellspacing="0" cellpadding="0">
+<TR>
+
+
+
+<!--INTRO INTRO INTRO-->
+<TD vAlign="top" align="left">
+<!--paghe content-->
+<span class="intro-position">
+<iframe noresize frameborder="0" framespacing="0" hspace="0" marginheight="0" marginwidth="0" src="intro.html" width="500" height="500"></iframe>
+</span>
+<!--spacer fills in TD area and provieds clickable IMG MPA AREA's-->
+<IMG SRC="imgs/bkgs/rear-1.jpg" width="600" height="600" useMap="#intro" border="0" name="intro">
+</TD>
+
+
+
+<!--EXTERIOR EXTERIOR EXTERIOR-->
+<TD vAlign="top" align="left">
+<!--paghe content-->
+<span class="exterior-position">
+<iframe noresize frameborder="0" framespacing="0" hspace="0" marginheight="0" marginwidth="0" src="exterior.html" width="500" height="500"></iframe>
+</span>
+<!--spacer fills in TD area and provieds clickable IMG MPA AREA's-->
+<IMG SRC="imgs/bkgs/front-1.jpg" width="600" height="600" useMap="#exterior" border="0" name="exterior">
+</TD>
+
+
+
+<!--INTERIOR INTERIOR INTERIOR-->
+<TD vAlign="top" align="left">
+<!--paghe content-->
+<span class="interior-position">
+<iframe noresize frameborder="0" framespacing="0" hspace="0" marginheight="0" marginwidth="0" src="interior.html" name="interior" width="500" height="500"></iframe>
+</span>
+<!--spacer fills in TD area and provieds clickable IMG MPA AREA's-->
+<IMG SRC="imgs/bkgs/front-2.jpg" width="600" height="600" useMap="#interior" border="0" name="interior">
+</TD>
+
+
+<!--MOTOR MOTOR MOTOR-->
+<TD vAlign="top" align="left">
+<!--paghe content-->
+<span class="motor-position">
+<iframe noresize frameborder="0" framespacing="0" hspace="0" marginheight="0" marginwidth="0" src="motor.html" width="500" height="500"></iframe>
+</span>
+<!--spacer fills in TD area and provieds clickable IMG MPA AREA's-->
+<IMG SRC="imgs/bkgs/rear-2.jpg" width="600" height="600" useMap="#motor" border="0" name="motor">
+</TD>
+
+<!--DATA DATA DATA-->
+<TD vAlign="top" align="left">
+<!--paghe content-->
+<span class="data-position">
+<iframe noresize frameborder="0" framespacing="0" hspace="0" marginheight="0" marginwidth="0" src="data.html" width="500" height="500"></iframe>
+</span>
+<!--spacer fills in TD area and provieds clickable IMG MPA AREA's-->
+<IMG SRC="imgs/bkgs/front-3.jpg" width="600" height="600" useMap="#data" border="0" name="data">
+</TD>
+
+<!--LINK LINK LINK-->
+<TD vAlign="top" align="left">
+<!--paghe content-->
+<span class="link-position">
+<iframe noresize frameborder="0" framespacing="0" hspace="0" marginheight="0" marginwidth="0" src="link.html" width="500" height="500"></iframe>
+</span>
+<!--spacer fills in TD area and provieds clickable IMG MPA AREA's-->
+<IMG SRC="imgs/bkgs/rear-3.jpg" width="600" height="600" useMap="#link" border="0" name="link"></TD>
+
+<!--STUFF STUFF STUFF-->
+<TD vAlign="top" align="left">
+<!--paghe content-->
+<span class="stuff-position">
+<iframe noresize frameborder="0" framespacing="0" hspace="0" marginheight="0" marginwidth="0" src="stuff.html" width="500" height="500"></iframe>
+</span>
+<!--spacer fills in TD area and provieds clickable IMG MPA AREA's-->
+<IMG SRC="imgs/bkgs/front-4.jpg" width="600" height="600" useMap="#stuff" border="0" name="stuff"></TD>
+
+</TR>
+</TABLE>
+
+<!--navagation linkl areas-->
+<!--main page-->
+<MAP name="intro">
+
+<!--exterior-->
+<AREA shape="rect" coords="500,0,600,100" href="javascript:scrollit(600)">
+<!--interior-->
+<AREA shape="rect" coords="500,100,600,200" href="javascript:scrollit(1200)">
+<!--motor-->
+<AREA shape="rect" coords="500,200,600,300" href="javascript:scrollit(1800)">
+<!--data-history-->
+<AREA shape="rect" coords="500,300,600,400" href="javascript:scrollit(2400)">
+<!--Links-->
+<AREA shape="rect" coords="500,400,600,500" href="javascript:scrollit(3000)">
+<!--Stuff-->
+<AREA shape="rect" coords="500,500,600,600" href="javascript:scrollit(3600)">
+</MAP>
+
+<MAP name="exterior">
+<!--intro-->
+<AREA shape="rect" coords="500,0,600,100" href="javascript:scrollit(0)">
+
+<!--interior-->
+<AREA shape="rect" coords="500,100,600,200" href="javascript:scrollit(1200)">
+<!--motor-->
+<AREA shape="rect" coords="500,200,600,300" href="javascript:scrollit(1800)">
+<!--data-history-->
+<AREA shape="rect" coords="500,300,600,400" href="javascript:scrollit(2400)">
+<!--Links-->
+<AREA shape="rect" coords="500,400,600,500" href="javascript:scrollit(3000)">
+<!--Stuff-->
+<AREA shape="rect" coords="500,500,600,600" href="javascript:scrollit(3600)">
+</MAP>
+
+<MAP name="interior">
+<!--intro-->
+<AREA shape="rect" coords="500,0,600,100" href="javascript:scrollit(0)">
+<!--exterior-->
+<AREA shape="rect" coords="500,100,600,200" href="javascript:scrollit(600)">
+
+<!--motor-->
+<AREA shape="rect" coords="500,200,600,300" href="javascript:scrollit(1800)">
+<!--data-history-->
+<AREA shape="rect" coords="500,300,600,400" href="javascript:scrollit(2400)">
+<!--Links-->
+<AREA shape="rect" coords="500,400,600,500" href="javascript:scrollit(3000)">
+<!--Stuff-->
+<AREA shape="rect" coords="500,500,600,600" href="javascript:scrollit(3600)">
+</MAP>
+
+<MAP name="motor">
+<!--intro-->
+<AREA shape="rect" coords="0,0,100,100" href="javascript:scrollit(0)">
+<!--interior-->
+<AREA shape="rect" coords="100,0,200,100" href="javascript:scrollit(600)">
+<!--exterior-->
+<AREA shape="rect" coords="200,0,300,100" href="javascript:scrollit(1200)">
+
+<!--data-history-->
+<AREA shape="rect" coords="300,0,400,100" href="javascript:scrollit(2400)">
+<!--Links-->
+<AREA shape="rect" coords="400,0,500,100" href="javascript:scrollit(3000)">
+<!--Stuff-->
+<AREA shape="rect" coords="500,0,600,100" href="javascript:scrollit(3600)">
+</MAP>
+
+
+<MAP name="data">
+<!--intro-->
+<AREA shape="rect" coords="0,0,100,100" href="javascript:scrollit(0)">
+<!--interior-->
+<AREA shape="rect" coords="0,100,100,200" href="javascript:scrollit(600)">
+<!--exterior-->
+<AREA shape="rect" coords="0,200,100,300" href="javascript:scrollit(1200)">
+<!--motor-->
+<AREA shape="rect" coords="0,300,100,400" href="javascript:scrollit(1800)">
+
+<!--Links-->
+<AREA shape="rect" coords="0,400,100,500" href="javascript:scrollit(3000)">
+<!--Stuff-->
+<AREA shape="rect" coords="0,500,100,600" href="javascript:scrollit(3600)">
+</MAP>
+
+<MAP name="link">
+<!--intro-->
+<AREA shape="rect" coords="0,0,100,100" href="javascript:scrollit(0)">
+<!--interior-->
+<AREA shape="rect" coords="0,100,100,200" href="javascript:scrollit(600)">
+<!--exterior-->
+<AREA shape="rect" coords="0,200,100,300" href="javascript:scrollit(1200)">
+<!--motor-->
+<AREA shape="rect" coords="0,300,100,400" href="javascript:scrollit(1800)">
+<!--data-->
+<AREA shape="rect" coords="0,400,100,500" href="javascript:scrollit(2400)">
+
+<!--Stuff-->
+<AREA shape="rect" coords="0,500,100,600" href="javascript:scrollit(3600)">
+</MAP>
+
+<MAP name="stuff">
+<!--intro-->
+<AREA shape="rect" coords="0,0,100,100" href="javascript:scrollit(0)">
+<!--interior-->
+<AREA shape="rect" coords="0,100,100,200" href="javascript:scrollit(600)">
+<!--exterior-->
+<AREA shape="rect" coords="0,200,100,300" href="javascript:scrollit(1200)">
+<!--motor-->
+<AREA shape="rect" coords="0,300,100,400" href="javascript:scrollit(1800)">
+<!--data-->
+<AREA shape="rect" coords="0,400,100,500" href="javascript:scrollit(2400)">
+<!--link-->
+<AREA shape="rect" coords="0,500,100,600" href="javascript:scrollit(3000)">
+
+</MAP>
+
+
+</BODY>
+</HTML>
